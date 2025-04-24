@@ -1,0 +1,32 @@
+
+# Chada Tech Clock Project
+
+## Project Overview
+This project involves creating an object-oriented C++ application to display both a 12-hour and a 24-hour clock simultaneously. The goal is to meet international standards and allow user input for setting the time.
+
+## Reflection
+### Summarize the Project
+This project involved creating an object-oriented C++ application to display both a 12-hour and a 24-hour clock simultaneously. The goal was to meet international standards and allow user input for setting the time.
+
+### What Did You Do Particularly Well?
+I implemented the clock functionality using clear and concise object-oriented principles. The code is modular, with separate classes for the clock and user interface, making it easy to understand and maintain.
+
+### Where Could You Enhance Your Code?
+I could enhance the code by adding more robust input validation to ensure the user enters valid time values. Additionally, implementing error handling would make the application more secure and reliable.
+
+### Which Pieces of the Code Did You Find Most Challenging to Write?
+The most challenging part was ensuring the correct conversion between 12-hour and 24-hour formats. I overcame this by carefully testing edge cases and using clear logic to handle the AM/PM distinction.
+
+### What Tools or Resources Are You Adding to Your Support Network?
+I used online C++ documentation and forums like Stack Overflow to troubleshoot issues. Adding these resources to my support network will help me tackle future coding challenges more efficiently.
+
+### What Skills from This Project Will Be Particularly Transferable to Other Projects or Course Work?
+The skills of modular programming, object-oriented design, and user input handling are highly transferable. These principles are fundamental to many programming tasks and will be useful in future projects.
+
+### How Did You Make This Program Maintainable, Readable, and Adaptable?
+I used clear naming conventions, in-line comments, and modular design to ensure the code is easy to read and maintain. The separation of concerns between the clock functionality and user interface makes the program adaptable to future changes.
+
+## How to Run the Code
+1. Clone the repository.
+2. Open the project in your C++ IDE.
+3. Compile and run the `main.cpp` file.
