@@ -1,0 +1,62 @@
+#include <iostream>
+#include <iomanip>
+
+class Clock {
+private:
+    int hours;
+    int minutes;
+    int seconds;
+
+public:
+    Clock(int h = 0, int m = 0, int s = 0) : hours(h), minutes(m), seconds(s) {}
+
+    void setTime(int h, int m, int s) {
+        hours = h;
+        minutes = m;
+        seconds = s;
+    }
+
+    void display12HourFormat() {
+        int displayHours = hours % 12;
+        if (displayHours == 0) displayHours = 12;
+        std::string period = (hours >= 12) ? "PM" : "AM";
+        std::cout << std::setw(2) << std::setfill('0') << displayHours << ":"
+            << std::setw(2) << std::setfill('0') << minutes << ":"
+            << std::setw(2) << std::setfill('0') << seconds << " " << period << std::endl;
+    }
+
+    void display24HourFormat() {
+        std::cout << std::setw(2) << std::setfill('0') << hours << ":"
+            << std::setw(2) << std::setfill('0') << minutes << ":"
+            << std::setw(2) << std::setfill('0') << seconds << std::endl;
+    }
+};
+
+class UserInterface {
+public:
+    void getUserInput(Clock& clock) {
+        int h, m, s;
+        std::cout << "Enter hours: ";
+        std::cin >> h;
+        std::cout << "Enter minutes: ";
+        std::cin >> m;
+        std::cout << "Enter seconds: ";
+        std::cin >> s;
+        clock.setTime(h, m, s);
+    }
+};
+
+int main() {
+    Clock clock;
+    UserInterface ui;
+
+    ui.getUserInput(clock);
+
+    std::cout << "12-Hour Format: ";
+    clock.display12HourFormat();
+
+    std::cout << "24-Hour Format: ";
+    clock.display24HourFormat();
+
+    return 0;
+}
